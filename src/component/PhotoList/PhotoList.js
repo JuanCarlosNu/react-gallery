@@ -3,7 +3,17 @@ import React, { Component } from 'react';
 
 
 class PhotoList extends Component {
-    state = {  } 
+
+    constructor() {
+        super()
+        this.state =  {
+            photos: []
+        }
+    }
+  
+    componentDidMount(){
+        
+    }
     render() { 
         return (
            <div>PhotoList </div>
