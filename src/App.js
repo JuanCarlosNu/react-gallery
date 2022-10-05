@@ -1,9 +1,12 @@
 import React from 'react';
+import PhotoList from './component/PhotoList/PhotoList';
+
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world!</h1>
+   <PhotoList />
       </div>
   );
 }
