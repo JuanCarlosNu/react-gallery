@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PhotoItem = ({ photo }) => {
   return (
@@ -10,7 +11,7 @@ const PhotoItem = ({ photo }) => {
          <p className='photo__time' >{photo.created_at}</p>
          <p className='photo__time'>{photo.updated_at}</p>
          <p className='photo__likes'></p>
-         <p className='photo__user'></p>
+         <Link to={`/users/${photo.user.username}`} className='photo__user'></Link>
       </div>
       <div className='photo__buttons'>
          <a className='photo__btn' href={photo.user.links.html}>{photo.user.name}</a>
