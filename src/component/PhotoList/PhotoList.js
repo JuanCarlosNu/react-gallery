@@ -18,9 +18,10 @@ class PhotoList extends Component {
             }
           
         });
-        this.state { 
+
+        this.setState ({ 
             photos 
-        }
+        })
     }
     render() { 
         return (
