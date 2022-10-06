@@ -1,10 +1,10 @@
 import React from 'react';
 
-const PhotoItem = ({photo}) => {
+const PhotoItem = ({ photo }) => {
   return (
     <div>
      <div className='photo__img--container'>
-         <img className='photo__img'/>
+         <img/>
       </div>
      <div className='photo__content'>
          <p className='photo__time'></p>

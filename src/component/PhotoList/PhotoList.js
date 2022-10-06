@@ -23,13 +23,17 @@ class PhotoList extends Component {
         this.setState ({ 
             photos 
         })
+
         console.log(photos);
     }
+
+
     render() {
-        if(this.state.photos.length === 0) return <div><h1>Loading</h1></div> 
+        if(this.state.photos.length === 0)
+         return <div><h1>Loading</h1></div> 
         
         return <div> {
-    this.setState.photos( photo => <PhotoItem key={photo.id} photo={photo}/>)
+    this.state.photos.map( photo => <PhotoItem key={photo.id} photo={photo} />)
       }</div>;
     }
 }   
