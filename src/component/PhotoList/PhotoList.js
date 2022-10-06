@@ -12,13 +12,13 @@ class PhotoList extends Component {
     }
   
     async componentDidMount(){
-         const data = await axios.get('https://api.unsplash.com/photos', {
+         const { data : photos } = await axios.get('https://api.unsplash.com/photos', {
             headers: {
                 Authorization: "Client-ID " + API_KEY
             }
           
         });
-        console.log(data);
+        console.log(photos);
     }
     render() { 
         return (
