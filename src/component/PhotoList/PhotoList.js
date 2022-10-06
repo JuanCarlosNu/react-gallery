@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import PhotoItem from '../PhotoItem/PhotoItem';
 const API_KEY= "NtCC0KXu88qlLdrN_eers1JczYKsAdeYR1LipS7FH80"
 
 class PhotoList extends Component {
@@ -22,12 +23,13 @@ class PhotoList extends Component {
         this.setState ({ 
             photos 
         })
+        console.log(photos);
     }
     render() {
         if(this.state.photos.length === 0) return <div><h1>Loading</h1></div> 
         
         return <div> {
-    this.state.photos.map(photo => <div >{photo.id}</div>) // warming for the key: Warning: Each child in a list should have a unique "key" prop.
+    this.setState.photos( photo => <PhotoItem key={photo.id}/>)
       }</div>;
     }
 }   
