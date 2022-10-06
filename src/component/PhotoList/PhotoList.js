@@ -29,7 +29,7 @@ class PhotoList extends Component {
         if(this.state.photos.length === 0) return <div><h1>Loading</h1></div> 
         
         return <div> {
-    this.setState.photos( photo => <PhotoItem key={photo.id}/>)
+    this.setState.photos( photo => <PhotoItem key={photo.id} photo={photo}/>)
       }</div>;
     }
 }   
