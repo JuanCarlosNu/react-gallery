@@ -27,7 +27,7 @@ class PhotoList extends Component {
         if(this.state.photos.length === 0) return <div><h1>Loading</h1></div> 
         
         return <div> {
-    this.state.photos.map(photo => <div>{photo.id}</div>)
+    this.state.photos.map(photo => <div >{photo.id}</div>) // warming for the key: Warning: Each child in a list should have a unique "key" prop.
       }</div>;
     }
 }   
