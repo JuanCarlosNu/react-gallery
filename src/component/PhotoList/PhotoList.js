@@ -18,7 +18,9 @@ class PhotoList extends Component {
             }
           
         });
-        console.log(photos);
+        this.state { 
+            photos 
+        }
     }
     render() { 
         return (
