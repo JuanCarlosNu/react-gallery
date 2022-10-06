@@ -23,11 +23,13 @@ class PhotoList extends Component {
             photos 
         })
     }
-    render() { 
-        return (
-           <div>PhotoList </div>
-        );
+    render() {
+        if(this.state.photos.length === 0) return <div><h1>Loading</h1></div> 
+        
+        return <div> {
+    this.state.photos.map(photo => <div>{photo.id}</div>)
+      }</div>;
     }
-}
- 
+}   
+    
 export default PhotoList;
