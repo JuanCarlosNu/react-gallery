@@ -6,6 +6,7 @@ class UserInfo extends Component {
     render() { 
         return (
             <div>User</div>
+            )
 
     }
 }

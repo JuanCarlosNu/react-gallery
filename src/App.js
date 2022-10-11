@@ -1,6 +1,6 @@
 import React from 'react';
 import PhotoList from './component/PhotoList/PhotoList';
-import {Route, Routes } from 'react-router-dom'
+import {Route, Switch } from 'react-router-dom'
 import UserInfo from './component/UserInfo/UserInfo';
 
 
@@ -8,10 +8,10 @@ import UserInfo from './component/UserInfo/UserInfo';
 function App() {
   return (
     <div className="App">
-   <Routes>
+   <Switch>
         <Route path= "/" exact component={PhotoList} />
         <Route path="/users/:username" exact component={UserInfo} /> 
-   </Routes>
+   </Switch>
       </div>
   );
 }
