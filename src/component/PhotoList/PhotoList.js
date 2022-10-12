@@ -13,7 +13,7 @@ class PhotoList extends Component {
     }
   
     async componentDidMount(){
-         const { data : photos } = await api.get("·/photos");
+         const { data : photos } = await api.get("/photos");
 
         this.setState ({ 
             photos 
