@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import axios from 'axios';
 import PhotoItem from '../PhotoItem/PhotoItem';
-const API_KEY= "NtCC0KXu88qlLdrN_eers1JczYKsAdeYR1LipS7FH80"
+
+import api from '../Axios/api';
 
 class PhotoList extends Component {
 
@@ -13,12 +13,7 @@ class PhotoList extends Component {
     }
   
     async componentDidMount(){
-         const { data : photos } = await axios.get('https://api.unsplash.com/photos', {
-            headers: {
-                Authorization: "Client-ID " + API_KEY
-            }
-          
-        });
+         const { data : photos } = await api.get("·/photos");
 
         this.setState ({ 
             photos 

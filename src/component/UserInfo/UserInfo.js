@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-const API_KEY= "NtCC0KXu88qlLdrN_eers1JczYKsAdeYR1LipS7FH80"
+
+import api from '../Axios/api';
+
 
 
 class UserInfo extends Component {
@@ -15,11 +16,7 @@ class UserInfo extends Component {
        async componentDidMount(){
             const username = this.props.match.params.username;
 
-            const user = await axios.get(`https://api.unsplash.com/users/${username}`, {
-                headers: {
-                    Authorization: "Client-ID " + API_KEY
-                }
-            });
+            const user = await api.get(`/users/${username}`);
 
             console.log(user);
             
