@@ -24,7 +24,21 @@ class UserInfo extends Component {
 
     render() { 
         return (
-            <div>User</div>
+            <div className='user__info'>
+                <div className='user__content'>
+                    <h1 className='user__title'></h1>
+                    <p className='user__bio'></p>
+                    <div className='user__img--container'>
+                        <img className='user__img' />
+                            <a className='user__profile'></a>
+                    </div>
+                </div>
+                <div className='user__photos--container'>
+                    <p></p>
+                    <div className='user__photos'></div>
+                </div>
+            </div>
+
             )
 
     }
