@@ -18,17 +18,19 @@ class UserInfo extends Component {
 
             const user = await api.get(`/users/${username}`);
 
-            console.log(user);
+           // console.log(user);
             
-            this.setState({user})
+            this.setState({ user });
             
         }
 
-    render() { 
-        const {user} = this.state
+    render() {  
+        const { user } = this.state;
 
-        if (!user) return 'Loading';
-        
+        if (!user) return "Loading";
+         
+        console.log(user);
+
         return (
             <div className='user__info'>
                 <div className='user__content'>
