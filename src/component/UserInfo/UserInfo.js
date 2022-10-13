@@ -29,15 +29,15 @@ class UserInfo extends Component {
 
         if (!user) return "Loading";
          
-        console.log(user);
+       // console.log(user);
 
         return (
             <div className='user__info'>
                 <div className='user__content'>
-                    <h1 className='user__title'></h1>
-                    <p className='user__bio'></p>
+                    <h1 className='user__title'>{user.name}</h1>
+                    <p className='user__bio' >{user.value}</p>
                     <div className='user__img--container'>
-                        <img className='user__img' />
+                        <img src={user.profile_image.large} alt={user.name}  className='user__img' />
                             <a className='user__profile'></a>
                     </div>
                 </div>
