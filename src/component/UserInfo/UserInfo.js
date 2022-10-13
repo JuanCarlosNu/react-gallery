@@ -2,23 +2,21 @@ import React, { Component } from 'react';
 
 import api from '../Axios/api';
 
-
-
 class UserInfo extends Component {
 
     constructor(){
         super()
         this.state = {
             user: {}
-          }
+          };
         }
      
        async componentDidMount(){
             const username = this.props.match.params.username;
 
-            const user = await api.get(`/users/${username}`);
+            const {data: user} = await api.get(`/users/${username}`);
 
-           // console.log(user);
+            console.log(user);
             
             this.setState({ user });
             
@@ -28,8 +26,7 @@ class UserInfo extends Component {
         const { user } = this.state;
 
         if (!user) return "Loading";
-         
-       // console.log(user);
+ 
 
         return (
             <div className='user__info'>
@@ -37,7 +34,7 @@ class UserInfo extends Component {
                     <h1 className='user__title'>{user.name}</h1>
                     <p className='user__bio' >{user.value}</p>
                     <div className='user__img--container'>
-                        <img src={user.profile_image.large} alt={user.name}  className='user__img' />
+                        <img src={user.profile_image? user.profile_image.large : ""} alt={user.name}  className='user__img' />
                             <a className='user__profile'></a>
                     </div>
                 </div>

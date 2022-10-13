@@ -1,0 +1,38 @@
+[33m5271ba63[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m 134. show user info part 2: fill some markup and get an Error importing the data
+[33mad71f29b[m 133. 16-show user info part 1: check thta the data  (user) is being rendered using console.log
+[33mb8b54737[m 133. 16-show user info part 1: check that the date is being renderd using console.log
+[33m4c1687c4[m add conditional rendering
+[33m2a1b7e81[m 133. 16-show user info part 1: set state
+[33mc8bdac28[m 133. 16-show user info part 1: send the user data (array) to the state
+[33m4ead24ca[m some changes pending
+[33m3d50fabd[m 132. 15-add the markup for the userinfo component
+[33m5eae303e[m 131. 14-refactor the api calling: fiexed a bug, photos not displaying
+[33m3d8b527d[m 131. 14-refactor the api calling
+[33m892815fc[m 130. 13-get the userinfo from the api
+[33m91f3652f[m 130. 13-get the userinfo from the api
+[33mea33c937[m 129. 12-get the username from the url
+[33med5e1d28[m 128. 11-turn the username to a link
+[33mb6235bfd[m Merge branch 'keep'
+[33m6e6d6365[m[33m ([m[1;32mkeep[m[33m)[m Changed react-router-dom to version 5.3.0
+[33m8b314ca7[m changes done
+[33mf4916792[m some changes
+[33m26455dcc[m go back
+[33m17f7d9d3[m 127. 10-define our routes
+[33m18b2a0b8[m 127. 10-define our routes
+[33mc7f46f87[m 127. 10 importe browser Router to the index file
+[33m4a04779a[m 127. 10 install react-router-dom and imported to the index.js file
+[33m3cdf8718[m fixed the foto rendering not displaying: declaration was misisng the map method
+[33m27591d6d[m 125. 08-add the needed markup in" PhotoItem File" ,  attempting to pass the info from "PhotoList file" to it.
+[33m1dbda3bc[m 24. 07 Return a PhotoItem component for each photo that we have.
+[33mc4c5b798[m 24. 07 Warning: Each child in a list should have a unique "key" prop.
+[33mbbc44669[m 124. 07 If loading, display so. If we alredy got the date, map the info.
+[33mf61741b5[m 124. 07 Fixed error+ sent the info to the state using SetState
+[33mafa168b8[m 124. 07 destructuring the data obtained from the API
+[33m35e5e977[m 124. 07 Destructuring the date obtain from the api
+[33m73f39612[m 123. 06-get the data from the api
+[33m77e00f86[m 121. 04-add the componentDidMount method
+[33md13a6e59[m corrected some folder issue
+[33me67624d0[m 120. 03-create our first two component
+[33m4b5f14aa[m 119. 02-get everything ready
+[33m244e75b3[m 119. 02-get everything ready
+[33m7fbf29af[m Initialize project using Create React App
