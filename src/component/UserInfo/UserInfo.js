@@ -25,8 +25,7 @@ class UserInfo extends Component {
     render() {  
         const { user } = this.state;
 
-        if (!user) return "Loading"; //when loading we are getting view profile instead of loading, that is becase we get some elements from the array so the browser display the rendering and we get the local text before we get the image(couse it is more heavy)
- 
+        if (!user || !user.profile_image) return "Loading"; //solved adding the image loading to the condition.
 
         return (
             <div className='user__info'>
