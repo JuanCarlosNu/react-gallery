@@ -20,6 +20,8 @@ class UserInfo extends Component {
 
             console.log(user);
             
+            this.setState({user})
+            
         }
 
     render() { 
