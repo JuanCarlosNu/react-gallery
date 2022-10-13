@@ -25,6 +25,10 @@ class UserInfo extends Component {
         }
 
     render() { 
+        const {user} = this.state
+
+        if (!user) return 'Loading';
+        
         return (
             <div className='user__info'>
                 <div className='user__content'>
