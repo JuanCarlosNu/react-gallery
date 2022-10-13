@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './UserInfo.css';
 import api from '../Axios/api';
 import PhotoItem from '../PhotoItem/PhotoItem';
 
@@ -41,10 +41,10 @@ class UserInfo extends Component {
                     </div>
                 </div>
                 <div className='user__photos--container'>
-                    <p>Images By: {user.name}</p>
+                    <p className='User__photos--count'>Images By: {user.name}</p>
                     <div className='user__photos'>
                      {user.photos.map(photo => (
-                        <div key={photo.id}>
+                        <div key={photo.id} className='user__info--img'>
                             <img src={photo.urls.thumb} alt='user photos' />
                         </div> 
                      ))}
