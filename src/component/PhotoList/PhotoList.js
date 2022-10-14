@@ -26,6 +26,12 @@ class PhotoList extends Component {
         console.log(photos);
     }
 
+    handleImput = event =>{
+        this.setState({
+            [event.target.name] : event.target.value
+        })
+    }
+
 
     render() {
 
@@ -35,7 +41,7 @@ class PhotoList extends Component {
         
         return (
             <React.Fragment>
-            <PhotoForm />
+            <PhotoForm onchange={this.handleImput}/>
           <div> 
             {sorted.map( photo =>(
               <PhotoItem key={photo.id} photo={photo} />
