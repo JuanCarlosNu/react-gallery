@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PhotoItem from '../PhotoItem/PhotoItem';
 
 import api from '../Axios/api';
+import PhotoForm from '../PhotoForm/PhotoForm';
 
 class PhotoList extends Component {
 
@@ -25,11 +26,18 @@ class PhotoList extends Component {
 
     render() {
         if(this.state.photos.length === 0)
-         return <div><h1>Loading</h1></div> 
+         return <div className='Loading'>Loading</div> 
         
-        return <div> {
-    this.state.photos.map( photo => <PhotoItem key={photo.id} photo={photo} />)
-      }</div>;
+        return (
+            <React.Fragment>
+            <PhotoForm />
+          <div> 
+            {this.state.photos.map( photo =>(
+              <PhotoItem key={photo.id} photo={photo} />
+            ))}
+            </div>
+            </React.Fragment>
+        );
     }
 }   
     
