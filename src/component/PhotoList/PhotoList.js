@@ -3,14 +3,17 @@ import PhotoItem from '../PhotoItem/PhotoItem';
 
 import api from '../Axios/api';
 import PhotoForm from '../PhotoForm/PhotoForm';
+import lodash from 'lodash';
 
 class PhotoList extends Component {
 
     constructor() {
         super()
         this.state =  {
-            photos: []
-        }
+            photos: [],
+            sortTerm: '',
+            sortOrder: 'asc'
+        };
     }
   
     async componentDidMount(){
@@ -25,6 +28,8 @@ class PhotoList extends Component {
 
 
     render() {
+
+        const sorted = lodash.orderBy(this.state.photos, [this.state.sortTerm], [this.state.sortOrder] )
         if(this.state.photos.length === 0)
          return <div className='Loading'>Loading</div> 
         
@@ -32,7 +37,7 @@ class PhotoList extends Component {
             <React.Fragment>
             <PhotoForm />
           <div> 
-            {this.state.photos.map( photo =>(
+            {sorted.map( photo =>(
               <PhotoItem key={photo.id} photo={photo} />
             ))}
             </div>

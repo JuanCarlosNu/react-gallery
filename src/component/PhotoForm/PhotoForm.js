@@ -5,9 +5,10 @@ const PhotoForm = () => {
     return ( 
     <form>
         <select name='sortTerm' className='Select'>
+            <option value="likes">Select Item</option>
             <option value="created_at">Created at</option>
             <option value="updated_at">Updated at</option>
-            <option value="likes">Select Item</option>
+            <option value="likes">Likes</option>
         </select>
         <select>
             <option value="asc">Asc</option>
