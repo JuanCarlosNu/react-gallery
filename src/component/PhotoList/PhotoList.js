@@ -4,6 +4,7 @@ import PhotoItem from '../PhotoItem/PhotoItem';
 import api from '../Axios/api';
 import PhotoForm from '../PhotoForm/PhotoForm';
 import lodash from 'lodash';
+import StackGrid from "react-stack-grid";
 
 class PhotoList extends Component {
 
@@ -43,9 +44,11 @@ class PhotoList extends Component {
             <React.Fragment>
             <PhotoForm onchange={this.handleImput}/>
           <div> 
+            <StackGrid columnWidth={400}>
             {sorted.map( photo =>(
               <PhotoItem key={photo.id} photo={photo} />
             ))}
+            </StackGrid>
             </div>
             </React.Fragment>
         );
