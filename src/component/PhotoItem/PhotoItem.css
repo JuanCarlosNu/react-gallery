@@ -6,3 +6,26 @@
 .photo__img{
     width: 100%;
 }
+
+.photo__content{
+padding-left: 0.6rem;    
+}
+
+.photo__user{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.photo__buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.photo__btn{
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 0.7rem 1rem;
+    margin: 1.5rem 0;
+}

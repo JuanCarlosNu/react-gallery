@@ -9,10 +9,11 @@ const PhotoItem = ({ photo }) => {
          <img src={photo.urls.regular} className='photo__img' alt={photo.alt_description}/>
       </div>
      <div className='photo__content'>
-         <p className='photo__time' >{photo.created_at}</p>
-         <p className='photo__time'>{photo.updated_at}</p>
-         <p className='photo__likes'>{photo.likes}</p>
-         <Link to={`/users/${photo.user.username}`} className='photo__user'>{photo.user.username}</Link>
+         <p className='photo__time' >Created at: {photo.created_at}</p>
+         <p className='photo__time'>Updated at: {photo.updated_at}</p>
+         <p className='photo__likes'>{photo.likes} Likes</p>
+         <Link to={`/users/${photo.user.username}`} className='photo__user'>
+            By: {photo.user.username}</Link>
       </div>
       <div className='photo__buttons'>
          <a className='photo__btn' href={photo.user.links.html}>{photo.user.name}</a>
