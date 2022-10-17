@@ -1,0 +1,8 @@
+.photo__item {
+    box-shadow: 2px 2px 4px rgba(0,0, 0, .4);
+
+}
+
+.photo__img{
+    width: 100%;
+}

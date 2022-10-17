@@ -44,7 +44,7 @@ class PhotoList extends Component {
             <React.Fragment>
             <PhotoForm onchange={this.handleImput}/>
           <div> 
-            <StackGrid columnWidth={400}>
+            <StackGrid columnWidth={400} gutterWidth={15} gutterHeight={25}>
             {sorted.map( photo =>(
               <PhotoItem key={photo.id} photo={photo} />
             ))}
