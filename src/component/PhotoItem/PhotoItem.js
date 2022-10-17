@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './PhotoItem.css';
 
 const PhotoItem = ({ photo }) => {
   return (
-    <div>
+    <div className='photo__item'>
      <div className='photo__img--container'>
-         <img src={photo.urls.thumb} className='photo__img' alt={photo.alt_description}/>
+         <img src={photo.urls.regular} className='photo__img' alt={photo.alt_description}/>
       </div>
      <div className='photo__content'>
          <p className='photo__time' >{photo.created_at}</p>
